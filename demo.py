@@ -1,4 +1,4 @@
-## start
+## start my new code
 import re
 from azure.identity import AzureCliCredential
 from azure.mgmt.network import NetworkManagementClient
@@ -86,4 +86,4 @@ if re.match(pattern, ip_address):
     else:
         print(f"No VNet found containing IP Address: {ip_address}")
 else:
-    print(f"Opps.. Entered subnet not in azure scope \n \t Kindly check again")
+    print(f"Opps..... Entered subnet not in azure scope \n \t Kindly check again")
