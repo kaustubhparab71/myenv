@@ -1,3 +1,4 @@
+## start
 import re
 from azure.identity import AzureCliCredential
 from azure.mgmt.network import NetworkManagementClient
@@ -5,14 +6,13 @@ from azure.mgmt.subscription import SubscriptionClient
 from tabulate import tabulate
 
 credential = AzureCliCredential()
-
 subscription_client = SubscriptionClient(credential)
 
 subscriptions = subscription_client.subscriptions.list()
 resource_group = 0
 nsg_name = 0
 
-ip_address = ((input("Enter your requested Ip details with range :")))
+ip_address = (int(input("Enter your requested Ip details with range :")))
 
 pattern = r'^10\.(82|92|93|100|108|110|111|112|115|116|117|118|119|120|122|123|124|125|126)\.'
 if re.match(pattern, ip_address):   
